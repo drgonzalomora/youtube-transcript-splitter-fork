@@ -3,6 +3,17 @@
 
 The **YouTube Transcript Splitter** is a highly efficient tool that streamlines the process of acquiring and processing YouTube video transcripts for use with ChatGPT. This powerful command-line tool empowers you to: (1) retrieve the transcript through the video ID or URL; (2) customize the transcript handling through three distinct processing modes ('separate', 'full', or 'auto'); and (3) conveniently copy the processed transcript to your clipboard, either as a whole or in smaller segments to *accommodate ChatGPT's input limitations*. Moreover, it leverages prompt-engineering techniques to enhance output quality, ensuring a more seamless and user-friendly ChatGPT experience.
 
+SPANISH:
+El código es un script de Python que utiliza la biblioteca YouTubeTranscriptApi para extraer y procesar transcripciones de videos de YouTube. El script tiene la capacidad de dividir la transcripción en partes más pequeñas y copiarlas en el portapapeles del sistema operativo para su posterior uso.
+
+El script utiliza argumentos de línea de comando para especificar el modo de funcionamiento y la entrada de video de YouTube. Los modos disponibles son 'separate', 'full' y 'auto'. En el modo 'separate', la transcripción se divide en partes más pequeñas para facilitar su uso. En el modo 'full', la transcripción completa se copia en el portapapeles. En el modo 'auto', el script elige automáticamente el modo más adecuado según el tamaño de la transcripción.
+
+El script utiliza expresiones regulares para extraer el ID del video de la entrada de video proporcionada por el usuario. También define una excepción personalizada, InvalidModeError, que se lanza si el modo especificado no es uno de los tres modos permitidos.
+
+El código también utiliza la biblioteca pyperclip para copiar los fragmentos de texto en el portapapeles del sistema operativo. La cantidad máxima de tokens permitidos por parte se define como 1400.
+
+En general, el script permite a los usuarios procesar y utilizar transcripciones de videos de YouTube de manera más eficiente y efectiva.
+
 ## Table of Contents
 ---
 
